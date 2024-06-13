@@ -17,7 +17,7 @@ ALLOWED_ORIGINS = {
 }
 
 app = Flask(__name__)
-app.debug = True
+app.debug = False
 app.secret_key = 'development key'
 # app.config['SECRET_KEY'] = secrets.token_urlsafe(16)
 app.config['BOOTSTRAP_BOOTSWATCH_THEME'] = 'slate'
@@ -144,4 +144,4 @@ def get_exif(image):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0')
